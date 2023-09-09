@@ -22,8 +22,8 @@ import (
 	"fmt"
 
 	bin "github.com/gagliardetto/binary"
-	"github.com/gagliardetto/solana-go"
-	"github.com/gagliardetto/solana-go/text"
+	"github.com/rizkypsr/solana-go"
+	"github.com/rizkypsr/solana-go/text"
 )
 
 func init() {

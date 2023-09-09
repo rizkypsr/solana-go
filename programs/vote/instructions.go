@@ -21,9 +21,9 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	bin "github.com/gagliardetto/binary"
-	"github.com/gagliardetto/solana-go"
-	"github.com/gagliardetto/solana-go/text"
 	"github.com/gagliardetto/treeout"
+	"github.com/rizkypsr/solana-go"
+	"github.com/rizkypsr/solana-go/text"
 )
 
 var ProgramID solana.PublicKey = solana.VoteProgramID

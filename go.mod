@@ -15,7 +15,6 @@ require (
 	github.com/buger/jsonparser v1.1.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/fatih/color v1.9.0
-	github.com/gagliardetto/solana-go v1.8.4
 	github.com/google/go-cmp v0.5.2
 	github.com/gorilla/rpc v1.2.0
 	github.com/gorilla/websocket v1.4.2

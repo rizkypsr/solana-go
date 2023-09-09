@@ -19,7 +19,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/gagliardetto/solana-go/rpc"
+	"github.com/rizkypsr/solana-go/rpc"
 )
 
 func main() {
