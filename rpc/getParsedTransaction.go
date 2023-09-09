@@ -9,7 +9,8 @@ import (
 )
 
 type GetParsedTransactionOpts struct {
-	Commitment CommitmentType `json:"commitment,omitempty"`
+	Commitment                     CommitmentType `json:"commitment,omitempty"`
+	MaxSupportedTransactionVersion *uint64
 }
 
 type GetParsedTransactionResult struct {
@@ -29,6 +30,9 @@ func (cl *Client) GetParsedTransaction(
 	if opts != nil {
 		if opts.Commitment != "" {
 			obj["commitment"] = opts.Commitment
+		}
+		if opts.MaxSupportedTransactionVersion != nil {
+			obj["maxSupportedTransactionVersion"] = *opts.MaxSupportedTransactionVersion
 		}
 	}
 	obj["encoding"] = solana.EncodingJSONParsed
