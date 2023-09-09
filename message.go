@@ -643,9 +643,9 @@ func (m Message) checkPreconditions() error {
 	// and there are > 0 lookups,
 	// but the address table is empty,
 	// then we can't build the account meta list:
-	if m.IsVersioned() && m.AddressTableLookups.NumLookups() > 0 && (m.addressTables == nil || len(m.addressTables) == 0) {
-		return fmt.Errorf("cannot build account meta list without address tables")
-	}
+	//if m.IsVersioned() && m.AddressTableLookups.NumLookups() > 0 && (m.addressTables == nil || len(m.addressTables) == 0) {
+	//	return fmt.Errorf("cannot build account meta list without address tables")
+	//}
 
 	return nil
 }
