@@ -48,10 +48,10 @@ func (cl *Client) GetParsedTransaction(
 }
 
 func (wrap InstructionInfoEnvelope) MarshalJSON() ([]byte, error) {
-	if wrap.asString != "" {
-		return json.Marshal(wrap.asString)
+	if wrap.AsString != "" {
+		return json.Marshal(wrap.AsString)
 	}
-	return json.Marshal(wrap.asInstructionInfo)
+	return json.Marshal(wrap.AsInstructionInfo)
 }
 
 func (wrap *InstructionInfoEnvelope) UnmarshalJSON(data []byte) error {
@@ -67,7 +67,7 @@ func (wrap *InstructionInfoEnvelope) UnmarshalJSON(data []byte) error {
 	case '"':
 		// It's base64 (or similar)
 		{
-			err := json.Unmarshal(data, &wrap.asString)
+			err := json.Unmarshal(data, &wrap.AsString)
 			if err != nil {
 				return err
 			}
@@ -75,7 +75,7 @@ func (wrap *InstructionInfoEnvelope) UnmarshalJSON(data []byte) error {
 	case '{':
 		// It's JSON, most likely.
 		{
-			return json.Unmarshal(data, &wrap.asInstructionInfo)
+			return json.Unmarshal(data, &wrap.AsInstructionInfo)
 		}
 	default:
 		return fmt.Errorf("Unknown kind: %v", data)

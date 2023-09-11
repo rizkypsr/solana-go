@@ -503,8 +503,8 @@ type ParsedInstruction struct {
 }
 
 type InstructionInfoEnvelope struct {
-	asString          string
-	asInstructionInfo *InstructionInfo
+	AsString          string
+	AsInstructionInfo *InstructionInfo
 }
 
 type InstructionInfo struct {

@@ -2205,7 +2205,7 @@ func TestClient_GetParsedTransaction(t *testing.T) {
 			"mint":      "E942z7FnS7GpswTvF5Vggvo7cMTbvZojjLbFgsrDVff1",
 		},
 		InstructionType: "burn",
-	}, out.Meta.InnerInstructions[0].Instructions[0].Parsed.asInstructionInfo)
+	}, out.Meta.InnerInstructions[0].Instructions[0].Parsed.AsInstructionInfo)
 	assert.Equal(t, &InstructionInfo{
 		Info: map[string]interface{}{
 			"destination": "9bFNrXNb2WTx8fMHXCheaZqkLZ3YCCaiqTftHxeintHy",
@@ -2213,7 +2213,7 @@ func TestClient_GetParsedTransaction(t *testing.T) {
 			"source":      "G7Hf2J55BAkHtbbXPh94UTGRCQioKPpnb5oKQMBteXo",
 		},
 		InstructionType: "transfer",
-	}, out.Transaction.Message.Instructions[0].Parsed.asInstructionInfo)
+	}, out.Transaction.Message.Instructions[0].Parsed.AsInstructionInfo)
 }
 
 func TestClient_GetTransactionCount(t *testing.T) {

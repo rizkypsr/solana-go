@@ -651,10 +651,10 @@ func (m Message) checkPreconditions() error {
 }
 
 func (m Message) AccountMetaList() (AccountMetaSlice, error) {
-	err := m.checkPreconditions()
-	if err != nil {
-		return nil, err
-	}
+	//err := m.checkPreconditions()
+	//if err != nil {
+	//	return nil, err
+	//}
 	accountKeys, err := m.GetAllKeys()
 	if err != nil {
 		return nil, err
